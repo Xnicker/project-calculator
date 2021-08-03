@@ -38,6 +38,11 @@ div {
     grid-area: body;
     
 }
-
+#calcButton {
+    margin: auto;
+}
+#calcDisplay{
+    text-align: right;
+}
 .operatorDiv {}
 .operatorButton{}
