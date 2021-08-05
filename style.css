@@ -12,7 +12,53 @@ main {
     margin: 0px;
 }
 div {
-    border: 1px solid blue; 
+    background-color: #f2f2f2;
+}
+#label {
+    display: grid;
+    grid-template-areas: "top top"
+    "topleft topright"
+    "unten unten";
+}
+.label {
+    font-family: monospace;
+}
+#casio {
+    grid-area: topleft;
+    text-align: right;
+    display:table-cell;
+    vertical-align: bottom;
+    font-size: 1.5em;
+    font-weight: bold;
+   
+    
+}
+#memory {
+    grid-area: topright;
+    text-align: center;
+    font-size: 1.5em;
+}
+#electronic{
+    grid-area: unten;
+    text-align: center;
+    font-size: 1em;
+    color: skyblue;
+}
+
+.operandButton {
+    background-color: white;
+    border: 2px solid black;
+}
+.operatorButton {
+    background-color: #999999;
+    border: 2px solid black;
+    color: white;
+}
+#buttonzuruecksetzen {
+    background-color: #ff9900;
+}
+#buttonloeschen, #buttonplusminus, #buttonprozent {
+    background-color: #0066cc;
 }
 #calculatorbox {
     display: grid;
@@ -24,6 +70,8 @@ div {
     "body"
     "body"
     "body";
+    border:2px solid black;
+    border-radius: 1%;
     
 }
 #calcHeader{
@@ -43,6 +91,50 @@ div {
 }
 #calcDisplay{
     text-align: right;
+    height: 50%;
+    width: 100%;
+    margin:0px;
+    padding:0px;
+    position: relative;
+    top: 25%;
+    background-color: #001a00;
+    border-style: none;
+    font-size: 2em;
+    font-family: monospace;
+    color: #99ff99;
 }
-.operatorDiv {}
-.operatorButton{}
+#calcDisplayDiv{
+    background-color:black;
+
+}
+button {
+    position: relative;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    font-family: monospace;
+    height:80%;
+    width: 80%;
+    border-radius: 10%;
+    
+
+}
+
+@media screen and (max-height: 800px) {
+    button {
+        font-size: 1em;
+    }
+    #calcDisplay {
+        font-size: 1em;
+    }
+    #casio {
+        font-size: 1em;
+    }
+    #memory  {
+        font-size: 1em;
+    }
+    #electronic {
+        font-size: 0.5em;
+    }
+}
